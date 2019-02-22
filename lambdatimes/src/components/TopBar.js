@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TopBarWrapper = styled.div`
-  width: 97%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: none;
