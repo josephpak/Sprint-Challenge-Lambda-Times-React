@@ -78,22 +78,31 @@ const HeaderRight = styled.div`
   }
 `
 
-const TopBar = () => {
-  return (
-    <TopBarWrapper>
-      <HeaderContainer>
-        <HeaderLeft>
-          <span>TOPICS</span><span>SEARCH</span>
-        </HeaderLeft>
-        <HeaderCenter>
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </HeaderCenter>
-        <HeaderRight>
-          <span>LOG IN</span>
-        </HeaderRight>
-      </HeaderContainer>
-    </TopBarWrapper>
-  )
+class TopBar extends React.Component {
+  
+  clearLocalStorage = e => {
+    e.preventDefault();
+    localStorage.clear();
+    window.location.reload();
+  };
+
+  render() {
+    return (
+      <TopBarWrapper>
+        <HeaderContainer>
+          <HeaderLeft>
+            <span>TOPICS</span><span>SEARCH</span>
+          </HeaderLeft>
+          <HeaderCenter>
+            <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
+          </HeaderCenter>
+          <HeaderRight>
+            <span onClick={this.clearLocalStorage}>LOG OUT</span>
+          </HeaderRight>
+        </HeaderContainer>
+      </TopBarWrapper>
+    )
+  }
 }
 
 export default TopBar;

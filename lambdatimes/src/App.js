@@ -1,14 +1,14 @@
 import React from 'react';
-import TopBar from './components/TopBar';
-import Header from './components/Header';
-import Content from './components/Content/Content';
+import authenticate from './components/authenticate/authenticate'
+import HomePage from './components/HomePage/HomePage';
+import Login from './components/Login/Login'
+
+const ControlledDisplay = authenticate(HomePage)(Login)
 
 const App = () => {
   return (
     <div className="App">
-      <TopBar />
-      <Header />
-      <Content />
+      <ControlledDisplay />
     </div>
   );
 }
