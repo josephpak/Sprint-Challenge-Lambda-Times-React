@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Tab extends React.Component {
   constructor(props) {
@@ -21,6 +22,8 @@ class Tab extends React.Component {
   }    
 };
 
-// Make sure you include PropTypes on your props.
+Tab.propTypes = {
+  tabs: PropTypes.string
+}
 
 export default Tab;
