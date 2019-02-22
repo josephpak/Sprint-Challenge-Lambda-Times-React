@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TopBarWrapper = styled.div`
-  width: 100%;
+  width: 97%;
   display: flex;
   justify-content: center;
   align-items: none;
@@ -20,7 +20,7 @@ const HeaderContainer = styled.div`
   flex-direction: row;
   color: #fff;
   letter-spacing: 1px;
-  padding: 0 10px;
+  padding: 0 20px;
 
   @media (min-width: 1280px) {
     width: 1280px;
